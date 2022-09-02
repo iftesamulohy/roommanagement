@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - Room Management DIU</title>
+  <title>Components / Accordion - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -45,15 +45,22 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/diulogoside.png" alt="">
-        
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
+      <!--<i class="bi bi-list toggle-sidebar-btn"></i>-->
     </div><!-- End Logo -->
-
-    
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
+
+      
+
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link" href="#">Home</a>
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link" href="#">All Rooms</a>
+        </li><!-- End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
 
@@ -72,7 +79,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -81,13 +88,28 @@
               <hr class="dropdown-divider">
             </li>
 
-            
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-login.html">
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -102,166 +124,119 @@
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
-
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
-
-      <!--<li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li> End Profile Page Nav -->
-
-    </ul>
-
-  </aside><!-- End Sidebar-->
-
-  <main id="main" class="main">
-
-    <div class="pagetitle">
-      <h1>Dashboard</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
-
-    <section class="section dashboard">
-      <div class="row">
-
-        <!-- Left side columns -->
-        <div class="col-lg-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Find Empty Classrooms</h5>
-                <form class="row g-3">
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="date" class="form-control" id="floatingEmail" placeholder="Your Email">
-                      <label for="floatingEmail">Expected Date</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input type="time" class="form-control" id="floatingPassword" placeholder="Password">
-                      <label for="floatingPassword">Expected Time</label>
-                    </div>
-                  </div>
-                </form>
-                <button type="button" class="mt-3 btn btn-success rounded-pill" style="width: 100%;">Find Now</button>
-            </div>
-            
-          </div>
-          </div>
-          <div class="row">
-          <!--All card goes here-->
-
-            <div class="col-lg-3">
-              <div class="card">
-                <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
-                <div class="card-body" style="text-align:center ;">
-                  <h5 class="card-title">304 AB4</h5>
-                  <p class="card-text"><b>Capacity: </b>50 people</p>
-                  <button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button>
+  <section class="section hero">
+    <h1 class="heroh1">Find your room</h1>
+    <div class="col-lg-6 herosearch">
+      <div class="card p-3">
+        <div class="card-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="date" class="form-control" id="floatingEmail" placeholder="Your Email">
+                  <label for="floatingEmail">Expected Date</label>
                 </div>
-              </div><!-- End Card with an image on top -->
-            </div>
-            <div class="col-lg-3">
-              <div class="card">
-                <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
-                <div class="card-body" style="text-align:center ;">
-                  <h5 class="card-title">304 AB4</h5>
-                  <p class="card-text"><b>Capacity: </b>50 people</p>
-                  <button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="time" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Expected Time</label>
                 </div>
-              </div><!-- End Card with an image on top -->
-            </div>
-            <div class="col-lg-3">
-              <div class="card">
-                <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
-                <div class="card-body" style="text-align:center ;">
-                  <h5 class="card-title">304 AB4</h5>
-                  <p class="card-text"><b>Capacity: </b>50 people</p>
-                  <button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button>
-                </div>
-              </div><!-- End Card with an image on top -->
-            </div>
-            <div class="col-lg-3">
-              <div class="card">
-                <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
-                <div class="card-body" style="text-align:center ;">
-                  <h5 class="card-title">304 AB4</h5>
-                  <p class="card-text"><b>Capacity: </b>50 people</p>
-                  <button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button>
-                </div>
-              </div><!-- End Card with an image on top -->
-            </div>
-            <div class="col-lg-3">
-              <div class="card">
-                <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
-                <div class="card-body" style="text-align:center ;">
-                  <h5 class="card-title">304 AB4</h5>
-                  <p class="card-text"><b>Capacity: </b>50 people</p>
-                  <button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button>
-                </div>
-              </div><!-- End Card with an image on top -->
-            </div>
-            <div class="col-lg-3">
-              <div class="card">
-                <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
-                <div class="card-body" style="text-align:center ;">
-                  <h5 class="card-title">304 AB4</h5>
-                  <p class="card-text"><b>Capacity: </b>50 people</p>
-                  <button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button>
-                </div>
-              </div><!-- End Card with an image on top -->
-            </div>
-            <div class="col-lg-3">
-              <div class="card">
-                <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
-                <div class="card-body" style="text-align:center ;">
-                  <h5 class="card-title">304 AB4</h5>
-                  <p class="card-text"><b>Capacity: </b>50 people</p>
-                  <button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button>
-                </div>
-              </div><!-- End Card with an image on top -->
-            </div>
-            <div class="col-lg-3">
-              <div class="card">
-                <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
-                <div class="card-body" style="text-align:center ;">
-                  <h5 class="card-title">304 AB4</h5>
-                  <p class="card-text"><b>Capacity: </b>50 people</p>
-                  <button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button>
-                </div>
-              </div><!-- End Card with an image on top -->
-            </div>
-            <div class="col-lg-3">
-              <div class="card">
-                <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
-                <div class="card-body" style="text-align:center ;">
-                  <h5 class="card-title">304 AB4</h5>
-                  <p class="card-text"><b>Capacity: </b>50 people</p>
-                  <button type="button" class="btn btn-success rounded-pill"  data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button>
-                </div>
-              </div><!-- End Card with an image on top -->
-            </div>
-            
-          </div>
-        </div><!-- End Left side columns -->
-
-        <!-- Right side columns -->
+              </div>
+            </form>
+            <button type="button" class="mt-3 btn btn-success rounded-pill" style="width: 100%;">Find Now</button>
+        </div>
         
+      </div>
+      </div>
+  </section>
+
+
+  <main id="main" class="main" style="margin-left:0;">
+
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="text-align:center ;">
+              <h5 class="card-title">304 AB4</h5>
+              <p class="card-text"><b>Capacity: </b>50 people</p>
+              <a href="pages-login.html"><button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button></a>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="text-align:center ;">
+              <h5 class="card-title">304 AB4</h5>
+              <p class="card-text"><b>Capacity: </b>50 people</p>
+              <a href="pages-login.html"><button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button></a>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="text-align:center ;">
+              <h5 class="card-title">304 AB4</h5>
+              <p class="card-text"><b>Capacity: </b>50 people</p>
+              <a href="pages-login.html"><button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button></a>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="text-align:center ;">
+              <h5 class="card-title">304 AB4</h5>
+              <p class="card-text"><b>Capacity: </b>50 people</p>
+              <a href="pages-login.html"><button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button></a>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="text-align:center ;">
+              <h5 class="card-title">304 AB4</h5>
+              <p class="card-text"><b>Capacity: </b>50 people</p>
+              <a href="pages-login.html"><button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button></a>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="text-align:center ;">
+              <h5 class="card-title">304 AB4</h5>
+              <p class="card-text"><b>Capacity: </b>50 people</p>
+              <a href="pages-login.html"><button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button></a>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="text-align:center ;">
+              <h5 class="card-title">304 AB4</h5>
+              <p class="card-text"><b>Capacity: </b>50 people</p>
+              <a href="pages-login.html"><button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button></a>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="assets/img/classimg1.jpg" class="card-img-top" alt="...">
+            <div class="card-body" style="text-align:center ;">
+              <h5 class="card-title">304 AB4</h5>
+              <p class="card-text"><b>Capacity: </b>50 people</p>
+              <a href="pages-login.html"><button type="button" class="btn btn-success rounded-pill" data-bs-toggle="modal" data-bs-target="#smallModal">Book Now</button></a>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
 
       </div>
     </section>
@@ -269,36 +244,21 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer" style="margin-left:0px">
     <div class="copyright">
       &copy; Copyright <strong><span>Daffodil International University</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+     
     </div>
   </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-<!--modal-->
-<div class="modal fade" id="smallModal" tabindex="-1">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form class="row g-3">
-          <div class="col-md-12">
-            <div class="form-floating">
-              <input type="text" class="form-control" id="floatingName" placeholder="Your Name">
-              <label for="floatingName">Reason</label>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success rounded-pill" style="width: 100%;">Done</button>
-      </div>
-    </div>
-  </div>
-</div>
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
