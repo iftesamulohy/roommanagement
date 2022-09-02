@@ -553,3 +553,18 @@ p.bng{
   color: white !important;
   transition: .5s;
 }
+.hero{
+height: 500px;
+width: 100%;
+background-image: url("../img/diuimgblack.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+text-align: center;
+}
+.heroh1{
+padding-top: 150px;
+color: white;
+}
+.herosearch{
+margin-left: 25%;
+}
